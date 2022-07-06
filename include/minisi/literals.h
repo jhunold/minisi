@@ -41,12 +41,22 @@ operator"" _m(long double value)
   return double( value ) * metre;
 }
 
+#if defined (CLANG)
 inline
 area_t
 operator"" _m²(long double value)
 {
   return double( value ) * metre * metre;
 }
+#endif
+
+inline
+area_t
+operator"" _m2(long double value)
+{
+  return double( value ) * metre * metre;
+}
+
 inline
 duration_t
 operator"" _s(long double value)
@@ -96,12 +106,14 @@ operator"" _mps2(long double value)
   return double( value ) * metre / (second * second);
 }
 
+#if defined (CLANG)
 inline
 acceleration_t
 operator"" _mps²(long double value)
 {
   return double( value ) * metre / (second * second);
 }
+#endif
 
 inline
 jolt_t
@@ -110,12 +122,14 @@ operator"" _mps3(long double value)
   return double( value ) * metre / (second * second * second);
 }
 
+#if defined (CLANG)
 inline
 jolt_t
 operator"" _mps³(long double value)
 {
   return double( value ) * metre / (second * second * second);
 }
+#endif
 
 inline
 velocity_t

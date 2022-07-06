@@ -39,15 +39,15 @@ BOOST_AUTO_TEST_CASE(literals_test)
 {
   using namespace minisi::literals;
   BOOST_CHECK_EQUAL( 10.0_m, 10.0 * metre );
-  BOOST_CHECK_EQUAL( 10.0_m², 10.0 * metre * metre );
+  BOOST_CHECK_EQUAL( 10.0_m2, 10.0 * metre * metre );
   BOOST_CHECK_EQUAL( 10.0_s, 10.0 * second );
   BOOST_CHECK_EQUAL( 100.0_kg, 100.0 * kilogram );
   BOOST_CHECK_EQUAL( 1.0_N, 1.0 * newton );
   BOOST_CHECK_EQUAL( 543.0_J, 543.0 * joule );
   BOOST_CHECK_EQUAL( 100.0_W, 100.0 * watt );
   BOOST_CHECK_EQUAL( 3.6_mps, 3.6 * metre / second );
-  BOOST_CHECK_EQUAL( 9.81_mps², 9.81 * metre / (second * second) );
-  BOOST_CHECK_EQUAL( 6.53_mps³, 6.53 * metre / second / second / second );
+  BOOST_CHECK_EQUAL( 9.81_mps2, 9.81 * metre / (second * second) );
+  BOOST_CHECK_EQUAL( 6.53_mps3, 6.53 * metre / second / second / second );
   BOOST_CHECK_EQUAL( 70.0_kmph, 70.0 * kilometre / hour );
   BOOST_CHECK_EQUAL( 1.0_t, 1.0 * ton);
 }
