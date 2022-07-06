@@ -50,7 +50,7 @@ if (BUILD_INTERFACE)
   )
 endif()
 
-target_include_directories(Minisi 
+target_include_directories(Minisi
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include/>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>)
